@@ -1,0 +1,33 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Hexlet fastify task manager project",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "test": "jest --verbose --runInBand",
+    "build": "webpack",
+    "start": "fastify start server/plugin.js -l debug -P -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talinka/fastify-web-development-project-6.git"
+  },
+  "author": "Natalya Polikashina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Talinka/fastify-web-development-project-6/issues"
+  },
+  "homepage": "https://github.com/Talinka/fastify-web-development-project-6#readme",
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/__tests__/helpers/"
+    ],
+    "setupFiles": [
+      "dotenv/config"
+    ]
+  }
+}

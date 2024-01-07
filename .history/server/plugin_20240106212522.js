@@ -7,7 +7,7 @@ import fastifyStatic from '@fastify/static';
 import fastifyView from '@fastify/view';
 import fastifyFormbody from '@fastify/formbody';
 import fastifySecureSession from '@fastify/secure-session';
-import { Authenticator } from '@fastify/passport';
+import fastifyPassport from '@fastify/passport';
 import fastifySensible from '@fastify/sensible';
 import { plugin as fastifyReverseRoutes } from 'fastify-reverse-routes';
 import fastifyMethodOverride from 'fastify-method-override';
@@ -78,7 +78,6 @@ const addHooks = (app) => {
   });
 };
 
-/* eslint-disable */
 const registerPlugins = async (app) => {
   await app.register(fastifySensible);
   // await app.register(fastifyErrorPage);
@@ -91,7 +90,6 @@ const registerPlugins = async (app) => {
     },
   });
 
-  const fastifyPassport = new Authenticator();
   fastifyPassport.registerUserDeserializer(
     (user) => app.objection.models.user.query().findById(user.id),
   );
@@ -106,7 +104,7 @@ const registerPlugins = async (app) => {
       failureRedirect: app.reverse('root'),
       failureFlash: i18next.t('flash.authError'),
     },
-    // @ts-ignore
+  // @ts-ignore
   )(...args));
 
   await app.register(fastifyMethodOverride);
@@ -123,6 +121,7 @@ export const options = {
 // eslint-disable-next-line no-unused-vars
 export default async (app, _options) => {
   await registerPlugins(app);
+
   await setupLocalization();
   setUpViews(app);
   setUpStaticAssets(app);

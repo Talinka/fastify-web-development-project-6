@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hexlet fastify task manager project",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=16.x"
   },

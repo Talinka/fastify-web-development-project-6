@@ -1,2 +1,9 @@
+.idea/
+.vscode/
 node_modules/
-.history/
+build/
+dist/
+tmp/
+temp/
+database.sqlite
+.env

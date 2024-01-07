@@ -78,7 +78,6 @@ const addHooks = (app) => {
   });
 };
 
-/* eslint-disable */
 const registerPlugins = async (app) => {
   await app.register(fastifySensible);
   // await app.register(fastifyErrorPage);
@@ -122,7 +121,8 @@ export const options = {
 
 // eslint-disable-next-line no-unused-vars
 export default async (app, _options) => {
-  await registerPlugins(app);
+  // await registerPlugins(app);
+
   await setupLocalization();
   setUpViews(app);
   setUpStaticAssets(app);

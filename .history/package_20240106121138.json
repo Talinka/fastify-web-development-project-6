@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Hexlet fastify task manager project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "fastify start server/plugin.js -l debug -P -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talinka/fastify-web-development-project-6.git"
+  },
+  "author": "Natalya Polikashina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Talinka/fastify-web-development-project-6/issues"
+  },
+  "homepage": "https://github.com/Talinka/fastify-web-development-project-6#readme",
+  "dependencies": {
+    "fastify": "^4.25.2",
+    "fastify-cli": "^6.0.0"
+  }
+}

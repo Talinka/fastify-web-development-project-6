@@ -126,6 +126,7 @@ export default async (app, _options) => {
   await setupLocalization();
   setUpViews(app);
   setUpStaticAssets(app);
+  console.log('ttttt');
   addRoutes(app);
   addHooks(app);
 
