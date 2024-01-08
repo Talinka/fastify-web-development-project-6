@@ -62,7 +62,6 @@ const setupLocalization = async () => {
     .init({
       lng: 'en',
       fallbackLng: 'ru',
-      // debug: isDevelopment,
       resources: {
         ru,
         en,
