@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
 import fastify from 'fastify';
 import init from './server/plugin.js';
 import 'dotenv/config';
