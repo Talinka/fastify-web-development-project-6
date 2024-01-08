@@ -47,8 +47,8 @@ export default {
       },
       welcome: {
         index: {
-          hello: 'Hello from Hexlet!',
-          description: 'Online programming school',
+          hello: 'Hello world!',
+          description: 'Backend project',
           more: 'Learn more',
         },
       },

@@ -47,7 +47,7 @@ export default {
       },
       welcome: {
         index: {
-          hello: 'Привет от Хекслета!',
+          hello: 'Привет мир!',
           description: 'Практические курсы по программированию',
           more: 'Узнать Больше',
         },
